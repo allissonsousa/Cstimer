@@ -1,6 +1,2 @@
-import tempoFinal from atualizarTempo()
+import ('resetar') 
 
-function armazena() {
-    let Tabela = []
-    Tabela.push(tempoFinal)
-}
