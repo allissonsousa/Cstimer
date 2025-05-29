@@ -1,4 +1,4 @@
-let cont = 0
+function ordem(){let cont = 0
 listaFinal = []
 ultimaLetra = ''
 while (cont < 14){
@@ -19,3 +19,5 @@ while (cont < 14){
 }
 
 document.getElementById("random").textContent = listaFinal
+}
+

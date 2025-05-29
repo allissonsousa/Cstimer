@@ -1,50 +1,63 @@
-    let segundos = 0;
-    let cronometro = null;
-    let registro = []
-    const TEMPO_LIMITE = 10; // ⏱️ limite em segundos (altere para 60, 90, etc.)
+import ('ordem') 
+let cronometro = null;
+    let tempoInicial = 0;
+    let tempoDecorrido = 0;
 
     function atualizarTempo() {
-      const min = String(Math.floor(segundos / 60)).padStart(2, '0');
-      const sec = String(segundos % 60).padStart(2, '0');
-      document.getElementById("tempo").textContent = `${min}:${sec}`;
-      registro.push(`${min}:${sec}`)
+      const agora = Date.now();
+      const tempoAtual = tempoDecorrido + (cronometro ? agora - tempoInicial : 0);
+
+      const minutos = String(Math.floor(tempoAtual / 60000)).padStart(2, '0');
+      const segundos = String(Math.floor((tempoAtual % 60000) / 1000)).padStart(2, '0');
+      const milissegundos = String(Math.floor((tempoAtual % 1000) / 10)).padStart(2, '0'); // centésimos
+      
+      let tempoFinal = `${minutos}:${segundos}:${milissegundos}`;
+      document.getElementById('tempo').textContent = tempoFinal;
     }
 
     function iniciar() {
-      cronometro = setInterval(() => {
-        segundos++;
-        atualizarTempo();
-        if (segundos >= TEMPO_LIMITE) {
-          pararEComecarReset();
-        }
-      }, 1000);
-    }
-
-    function pararEComecarReset() {
-      clearInterval(cronometro);
-      cronometro = null;
-
-      setTimeout(() => {
-        segundos = 0;
-        atualizarTempo();
-      }, 2000); // mostra o tempo final por 2 segundos antes de resetar
+        if (cronometro) return;
+      tempoInicial = Date.now();
+      cronometro = setInterval(atualizarTempo, 10);
     }
 
     function pausar() {
+      if (!cronometro) return;
       clearInterval(cronometro);
+      tempoDecorrido += Date.now() - tempoInicial;
       cronometro = null;
     }
 
-    document.addEventListener('keydown', function(event) {
-      if (event.code === 'Space') {
-        event.preventDefault(); // evita rolagem
-        if (cronometro === null) {
-          iniciar();
-        } else {
-          pausar();
-          console.log('Seu tempo foi', registro)
-        }
-      }
-    })
+    function resetar() {
+      pausar();
+      atualizarTempo();
+      tempoDecorrido = 0
+      ordem();
+    }
+
+    // Inicia a exibição com 00:00:00
+    atualizarTempo();
 
     
+
+ // 🧠 Mapeamento de teclas para funções
+ const teclasFuncoes = {
+    ' ': () => { // espaço
+      if (cronometro) {
+        pausar();
+        resetar();
+      } else {
+        iniciar();
+      }
+    },
+
+  };
+
+  // 🎯 Ouvinte genérico de teclado
+  document.addEventListener('keydown', function (event) {
+    const tecla = event.key.toLowerCase();
+    if (teclasFuncoes[tecla]) {
+      event.preventDefault(); // evitar ações padrão (como rolagem)
+      teclasFuncoes[tecla]();
+    }
+  });
