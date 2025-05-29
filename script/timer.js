@@ -1,13 +1,10 @@
 import ('ordem') 
+import ('medial')
 let cronometro = null;
     let tempoInicial = 0;
     let tempoDecorrido = 0;
     let Tabela = []
     let item = ''
-    let minfinal = 0
-    let total = 0
-    let conta = 0
-    let media = 0
     
     function atualizarTempo() {
       const agora = Date.now();
@@ -36,7 +33,7 @@ let cronometro = null;
       tempoDecorrido += Date.now() - tempoInicial;
       cronometro = null;
       Tabela.push(item);
-      
+
     }
     
 
@@ -46,11 +43,6 @@ let cronometro = null;
       tempoDecorrido = 0
       document.getElementById('tabela').textContent = Tabela
       ordem();
-      conta += 1
-      total += tempoDecorrido
-      media = int(total / conta)
-      document.getElementById('media') = media
-
     }
 
 
