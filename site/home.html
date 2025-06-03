@@ -3,26 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css/corpo.css">
     <title>Document</title>
 </head>
 <body onload="ordem()">
     <nav>
-        <menu>
-            <div>Graficos</div>
-            <div>Médias</div>
-            <div>Tipos de cubos</div>
-            <div>Dicas</div>
-        </menu>
+        <span id="menu" , onclick= "abreFecha()"> Menu
+            <div id="menuItem">
+                <div >Graficos</div>
+                <div >Médias</div>
+                <div >Tipos de cubos</div>
+                <div >Dicas</div>
+            </div>
+        </span>
         <span>Speed Cubbee</span>
-        <user>icon</user>
+        <span>icon</span>
     </nav>
-    <div id="random" style="font-size: 30pt"></div>
-    <div id="tempo" style="font-size: 90pt">00:00:00</div>
-    <table>
-        <thead>Seus Tempos</thead>
-        <tbody id="itensTempo"></tbody>
+    <main>
+    <aside id="cronometro">
+        <div id="random" style="font-size: 30pt"></div>
+    <div id="tempo" >00:00:00</div>
+    </aside>
+    <aside id="anotaçao">
+    <p>Seus tempos <br>
+        <span id="tempos"></span>
+    </p>
+    <p>Sua média <br>
+        <span id="media"></span>
+    </p>
+    <table id="itensTempo">
+        <thead>Seus novos tempos</thead>
+        <tbody ></tbody>
     </table>
-
+    </aside> 
+    </main>
+    <footer>Criado por Allisson Sousa</footer>
+    <script src="../script/menu.js"></script>
     <script src="../script/ordem.js"></script>
     <script src="../script/timer.js"></script>
 </body>

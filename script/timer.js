@@ -11,12 +11,6 @@ let cronometro = null;
     let mediaValores = 0
     let cont = 0
 
-    function adicionarLinha(decorre){
-      const tabela = document.getElementById('itensTempo')[0];
-      const novaLinha = tabela.insertRow();
-      const celulaTempo = novaLinha.insertCell();
-      celulaTempo.textContent = decorre
-    }
 
     function atualizarTempo() {
       const agora = Date.now();
@@ -33,6 +27,13 @@ let cronometro = null;
       
     }
 
+    function adicionarLinha(){
+      const tabela = document.getElementById('itensTempo').getElementsByTagName('tbody')[0];
+      const novaLinha = tabela.insertRow();
+      const celulaTempo = novaLinha.insertCell();
+      celulaTempo.textContent = item
+    }
+
     function iniciar() {
         if (cronometro) return;
       tempoInicial = Date.now();
@@ -46,22 +47,22 @@ let cronometro = null;
       cronometro = null;
       decorre = tempoDecorrido
       Tabela.push(item);
-      adicionarLinha();
     }
     
 
     function resetar() {
       pausar();
       atualizarTempo();
-      strnumero = decorre.toString().slice(0,-1)
-      mediaValores = parseInt(strnumero)
+      strnumero = decorre.toString().slice(0,-1);
+      mediaValores = parseInt(strnumero);
       cont += 1
       soma += mediaValores
       media = soma / cont
       tempoDecorrido = 0
-      document.getElementById('tabela').textContent = Tabela
+      document.getElementById('tempos').textContent = Tabela
       document.getElementById('media').textContent = media
       ordem();
+      adicionarLinha();
     }
 
 
