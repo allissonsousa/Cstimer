@@ -53,3 +53,6 @@ aside#anotaçao>p{
     display: none;
 }
 
+table {
+    border: 3px;
+}
