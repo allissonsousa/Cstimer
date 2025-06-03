@@ -32,6 +32,7 @@ let cronometro = null;
       const novaLinha = tabela.insertRow();
       const celulaTempo = novaLinha.insertCell();
       celulaTempo.textContent = item
+      
     }
 
     function iniciar() {
