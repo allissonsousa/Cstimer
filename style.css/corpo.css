@@ -31,7 +31,8 @@ nav>span{
 #menuItem {
     display: none;
     position: absolute;
-
+    left: 0;
+    top: 100px;
 }
 #menuItem>div:hover{
     cursor: pointer;
@@ -83,7 +84,10 @@ aside#cronometro {
 aside#cronometro>div {
     padding-top: 50px;
 }
+div#tempo {
+    font-family: "Press Start 2P", system-ui;
 
+}
 aside#anotaçao{
     border: 3px soli white;
     font: 20px;
