@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css/corpo.css">
     <title>Document</title>
 </head>
 <body onload="ordem()">
-    <header id="head">
-        <menu id="navbar"  ><img src="botao-de-menu.png" style="width: 20px;" alt="menu">
+    <nav>
+        <menu>
             <div>Graficos</div>
             <div>Médias</div>
             <div>Tipos de cubos</div>
             <div>Dicas</div>
         </menu>
         <span>Speed Cubbee</span>
-        <user><img src="perfil.png"  style="width: 20px;" alt="20px"> Meu perfil</user>
-    </header>
+        <user>icon</user>
+    </nav>
     <div id="random" style="font-size: 30pt"></div>
     <div id="tempo" style="font-size: 90pt">00:00:00</div>
-    <div>Tempos:<p id="tabela"></p></div>
-    <div>Media: <p id="media"></p></div>
+    <table>
+        <thead>Seus Tempos</thead>
+        <tbody id="itensTempo"></tbody>
+    </table>
+
     <script src="../script/ordem.js"></script>
     <script src="../script/timer.js"></script>
 </body>

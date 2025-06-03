@@ -10,7 +10,14 @@ let cronometro = null;
     let strnumero = ''
     let mediaValores = 0
     let cont = 0
-    
+
+    function adicionarLinha(decorre){
+      const tabela = document.getElementById('itensTempo')[0];
+      const novaLinha = tabela.insertRow();
+      const celulaTempo = novaLinha.insertCell();
+      celulaTempo.textContent = decorre
+    }
+
     function atualizarTempo() {
       const agora = Date.now();
       const tempoAtual = tempoDecorrido + (cronometro ? agora - tempoInicial : 0);
@@ -39,7 +46,7 @@ let cronometro = null;
       cronometro = null;
       decorre = tempoDecorrido
       Tabela.push(item);
-
+      adicionarLinha();
     }
     
 
