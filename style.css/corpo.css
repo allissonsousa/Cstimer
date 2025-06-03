@@ -84,9 +84,8 @@ aside#cronometro {
 aside#cronometro>div {
     padding-top: 50px;
 }
-div#tempo {
+aside>div#tempo {
     font-family: "Press Start 2P", system-ui;
-
 }
 aside#anotaçao{
     border: 3px soli white;
