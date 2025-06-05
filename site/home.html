@@ -5,22 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css/corpo.css">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body onload="ordem()">
-    <header id="head">
-        <menu id="navbar"  ><img src="botao-de-menu.png" style="width: 20px;" alt="menu">
-            <div>Graficos</div>
-            <div>Médias</div>
-            <div>Tipos de cubos</div>
-            <div>Dicas</div>
-        </menu>
-        <span>Speed Cubbee</span>
-        <user><img src="perfil.png"  style="width: 20px;" alt="20px"> Meu perfil</user>
-    </header>
-    <div id="random" style="font-size: 30pt"></div>
-    <div id="tempo" style="font-size: 90pt">00:00:00</div>
-    <div>Tempos:<p id="tabela"></p></div>
-    <div>Media: <p id="media"></p></div>
+    <nav>
+        <span id="menu" , onclick= "abreFecha()"> Menu 
+            <div id="menuItem">
+                <div >Graficos</div>
+                <div >Médias</div>
+                <div >Tipos de cubos</div>
+                <div >Dicas</div>
+            </div>
+        </span>
+        <span id="logo">Speed Cubbee <img src="4677572.png" alt=""></span>
+        <span id="icone"><img src="perfil.png" alt=""></span>
+    </nav>
+    <main>
+    <aside id="cronometro">
+        <div id="random" style="font-size: 30pt"></div>
+    <div id="tempo" >00:00:00</div>
+    </aside>
+    <aside id="anotaçao">
+    <p>Seus tempos <br>
+        <span id="tempos"></span>
+    </p>
+    <p>Sua média <br>
+        <span id="media"></span>
+    </p>
+    <table id="itensTempo">
+        <thead>TEMPOS</thead>
+        <tbody ></tbody>
+    </table>
+    </aside> 
+    </main>
+    <footer>Criado por Allisson Sousa</footer>
+    <script src="../script/menu.js"></script>
     <script src="../script/ordem.js"></script>
     <script src="../script/timer.js"></script>
 </body>
