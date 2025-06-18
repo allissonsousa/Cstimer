@@ -21,7 +21,7 @@ nav {
     background-color: rgba(21, 27, 27, 0.904);
     display: flex;
     justify-content:  space-between; 
-    height: 10%;
+    height: 7%;
     width: 100%; 
     margin: 0px;
     padding: 0;
@@ -44,7 +44,7 @@ nav>span{
     display: none;
     position: absolute;
     left: 0;
-    top: 10%;
+    top: 7%;
     padding: 10px;
     background-color:rgba(21, 27, 27, 0.904) ;
 }
@@ -65,10 +65,12 @@ nav>span{
 #logo{
     text-decoration: underline;
     text-align: center;
-    font-size: 30pt;
+    font-size: 20pt;
+    padding: 4px;
+
 }
 #logo>img{
-    width: 50px;
+    width: 30px;
     padding: 0;
     margin: 0;
 }
@@ -82,6 +84,7 @@ main{
 }
 #random {
     display: block;
+    font-size: 3vw;
 }
 aside#cronometro {
     display: block;
@@ -91,12 +94,12 @@ aside#cronometro {
     text-align: center;
     color: white;
     font-weight: bold;
-    font-size: 90pt;
-    width: 100%;
-    height: 100px;
+    font-size: 9vw ;
+    width: max-content;
+    height: max-content;
 }
 aside#cronometro>div {
-    padding-top: 3%;
+    padding-top: 20vh;
 }
 aside>div#tempo {
     font-family: "Press Start 2P", system-ui;
@@ -119,13 +122,14 @@ footer {
     background-color: rgba(0, 0, 0, 0.733);
     color: white;
     width: 100%;
-    height: 7%;
+    height: 5%;
     display: flex;
     position: absolute;
     bottom: 0 ;
     justify-content: center;
     text-align: center;
     align-items: center;
+    font-size: 10pt;
 }
 .footerimg {
     width: 20px;
