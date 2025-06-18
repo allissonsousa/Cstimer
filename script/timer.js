@@ -19,12 +19,30 @@ let cronometro = null;
       const minutos = String(Math.floor(tempoAtual / 60000)).padStart(2, '0');
       const segundos = String(Math.floor((tempoAtual % 60000) / 1000)).padStart(2, '0');
       const milissegundos = String(Math.floor((tempoAtual % 1000) / 10)).padStart(2, '0'); // centésimos
-      
-      let tempoFinal = `${minutos}:${segundos}:${milissegundos}`;
+
+      if (minutos == '00' && segundos == '00' && milissegundos == '00') {
+        tempoFinal = ''
+      }
+      else if (minutos == '00' && segundos == '00') {
+        tempoFinal = `${milissegundos}`;
+      }
+      else if (minutos == '00'){
+        tempoFinal = `${segundos}:${milissegundos}`; 
+      } else {
+        tempoFinal = `${minutos}:${segundos}:${milissegundos}`;
+      }
+
       item = tempoFinal
       document.getElementById('tempo').textContent = tempoFinal;
       
       
+    }
+
+    function someApareceCodigo(){
+      let codigo = document.getElementById('random')
+      if (codigo != null) {
+        codigo.textContent = '';
+      } 
     }
 
     function adicionarLinha(){
@@ -39,6 +57,7 @@ let cronometro = null;
         if (cronometro) return;
       tempoInicial = Date.now();
       cronometro = setInterval(atualizarTempo, 10);
+      someApareceCodigo();
     }
 
     function pausar() {
@@ -93,3 +112,5 @@ let cronometro = null;
       teclasFuncoes[tecla]();
     }
   });
+
+  

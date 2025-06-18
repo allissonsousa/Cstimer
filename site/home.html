@@ -10,38 +10,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body onload="ordem()">
+    <img id="cubo" src="cubo-3d.png" alt="">
     <nav>
-        <span id="menu" , onclick= "abreFecha()"> Menu 
+        <span id="menu" onpointerenter="abreFecha()" onpointerleave="abreFecha()"> Menu 
             <div id="menuItem">
-                <div >Graficos</div>
-                <div >Médias</div>
-                <div >Tipos de cubos</div>
-                <div >Dicas</div>
+                <div >Seus tempos</div>
+                <div >Sua Média</div>
+                <div >Recordes</div>
+                <div ><a href="https://www.blog.oncube.com.br/tutoriais/tutorial-3x3x3/#:~:text=Tutorial%20do%20cubo%20m%C3%A1gico%203x3x3%2C%20conhe%C3%A7a%20seus%20movimentos%2C,e%20o%20avan%C3%A7ado.%20Aprenda%20a%20resolver%20em%20segundos." target="blank">Dicas</a></div>
             </div>
-        </span>
+        </span>  
         <span id="logo">Speed Cubbee <img src="4677572.png" alt=""></span>
         <span id="icone"><img src="perfil.png" alt=""></span>
     </nav>
     <main>
-    <aside id="cronometro">
+    <aside id="cronometro"> 
         <div id="random" style="font-size: 30pt"></div>
-    <div id="tempo" >00:00:00</div>
+        <div id="tempo" ></div>
     </aside>
     <aside id="anotaçao">
-    <p>Seus tempos <br>
         <span id="tempos"></span>
-    </p>
-    <p>ola </p>
-    <p>Sua média <br>
         <span id="media"></span>
-    </p>
-    <table id="itensTempo">
-        <thead>TEMPOS</thead>
+    <table id="itensTempo"> 
         <tbody ></tbody>
     </table>
     </aside> 
     </main>
-    <footer>Criado por Allisson Sousa</footer>
+    <footer>
+        <p>Criado por Allisson Sousa</p>
+        <a href="https://github.com/allissonsousa" target="_blank"><img class="footerimg" src="rounded.png" alt=""></a>
+        <a href="https://www.linkedin.com/in/alllisson-sousa-541b39296" target="blank"><img class="footerimg" src="linkedin.png" alt=""></a>
+    </footer>
     <script src="../script/menu.js"></script>
     <script src="../script/ordem.js"></script>
     <script src="../script/timer.js"></script>
