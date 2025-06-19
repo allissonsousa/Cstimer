@@ -25,7 +25,7 @@ function someCorpo() {
 }
 
 function fechaArtigo() {
-  const artigo = document.getElementsByTagName("article");
+  const artigo = document.getElementsByClassName("artigo");
   artigo.style.display = "none";
   someCorpo();
 }
