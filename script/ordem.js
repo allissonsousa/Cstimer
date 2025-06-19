@@ -2,7 +2,7 @@ function ordem() {
     let cont = 0
     listaFinal = []
     ultimaLetra = ''
-    while (cont < 14) {
+    while (cont < 12) {
         const lista1 = [" R ", " L ", " F ", " D ", " B ", " U "]
         const lista2 = ["", "´ ", "2 "]
         let item1 = lista1[Math.floor(Math.random() * lista1.length)]

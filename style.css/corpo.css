@@ -112,6 +112,7 @@ aside#cronometro {
     font-size: 9vw;
     width: max-content;
     height: max-content;
+    z-index: -1;
 }
 
 aside#cronometro>div {
@@ -136,37 +137,48 @@ aside#anotaçao {
     height: 100vh;
     align-items: center;
     justify-content: start;
-    transform: translateX(-12vw);
     position: absolute;
-    animation: aparece 2s ease-in forwards;
+    animation: aparece 1.5s ease-in-out;
 }
 
 @keyframes aparece {
     0% {
-        transform: translateX(84vw);
+        transform: translateX(100vw);
+        opacity: 0;
     }
 
     100% {
-        transform: translateX(0);
+        transform: translateX(0vw);
+        opacity: 1;
+    }
+}
+
+@keyframes some {
+    0% {
+        transform: translateX(0vw);
+    }
+
+    100% {
+        transform: translateX(-100vw);
     }
 }
 
 
 .artigo>div {
-    background-color: rgba(240, 248, 255, 0.692);
-    width: 34vw;
+    background: linear-gradient(rgba(0, 183, 255, 0.63), rgba(255, 0, 0, 0.644));
+    width: 40vw;
     height: 34vw;
     display: flex;
     position: relative;
     box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.479);
-    border-radius: 15px;
+    border-radius: 25px;
     align-items: center;
     justify-content: center;
 }
 
 .artigo>img {
-    height: 30vw;
-    transform: translateX(10vw);
+    height: 20vw;
+    transform: translateX(7vw) translateY(8vw);
 }
 
 .fecha {

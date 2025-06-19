@@ -1,19 +1,33 @@
 function surgeTempo() {
-  const corpo = document.getElementById("cronometro");
-  const logo = document.getElementById("cubo");
   const tempos = document.getElementById("anotacaotempo");
   tempos.style.display = "flex";
-  corpo.style.filter = 'blur(8px)';
-  logo.style.filter = 'blur(8px)';
+  someCorpo();
+}
+
+function surgeMedia() {
+  const media = document.getElementById("anotacaomedia");
+  media.style.display = "flex";
+  someCorpo();
+}
+
+function surgeRecordes() {
+  const recordes = document.getElementById("anotacaorecordes");
+  recordes.style.display = "flex";
+  someCorpo();
+}
+
+
+function someCorpo() {
+  const corpo = document.getElementById("cronometro");
+  const logo = document.getElementById("cubo");
+  corpo.style.filter = corpo.style.filter === "blur(8px)" ? "blur(0px)" : "blur(8px)";
+  logo.style.filter = logo.style.filter === "blur(8px)" ? "blur(0px)" : "blur(8px)";
 }
 
 function fechaArtigo() {
-  const corpo = document.getElementById("cronometro");
-  const logo = document.getElementById("cubo");
-  const artigo = document.getElementById("anotacaotempo");
+  const artigo = document.getElementsByTagName("article");
   artigo.style.display = "none";
-  corpo.style.filter = 'blur(0px)';
-  logo.style.filter = 'blur(0px)';
+  someCorpo();
 }
 
 
