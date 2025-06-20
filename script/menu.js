@@ -25,8 +25,12 @@ function someCorpo() {
 }
 
 function fechaArtigo() {
-  const artigo = document.getElementsByClassName("artigo");
-  artigo.style.display = "none";
+  const artigotempo = document.getElementById("anotacaotempo");
+  const artigomedia = document.getElementById("anotacaomedia");
+  const artigorecorde = document.getElementById("anotacaorecordes");
+  artigotempo.style.display = "none";
+  artigomedia.style.display = "none";
+  artigorecorde.style.display = "none";
   someCorpo();
 }
 

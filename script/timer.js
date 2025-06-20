@@ -113,3 +113,4 @@ document.addEventListener('keyup', function (event) {
   }
 });
 
+///Fazendo a parte do controle do timer no celular
