@@ -10,9 +10,9 @@ let media = 0
 let strnumero = ''
 let mediaValores = 0
 let cont = 0
+//isso aqui ta uma gambiarra do krai tenho q arrumar ta feio
 
-
-function atualizarTempo() {
+function atualizarTempo() {     //funçao do cronometro que conta o tempo e atualiza os digitos do relogio na tela
   const agora = Date.now();
   const tempoAtual = tempoDecorrido + (cronometro ? agora - tempoInicial : 0);
 
@@ -29,7 +29,7 @@ function atualizarTempo() {
   else if (minutos == '00') {
     tempoFinal = `${segundos}:${milissegundos}`;
   } else {
-    tempoFinal = `${minutos}:${segundos}:${milissegundos}`;
+    tempoFinal = `${minutos}:${segundos}:${milissegundos}`;   //gambiarra pra mostrar só as casas de unidades que contem valor
   }
 
   item = tempoFinal
