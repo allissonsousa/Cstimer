@@ -157,8 +157,9 @@ main {
 }
 
 aside#cronometro {
-  display: block;
-  justify-content: center;
+  display: flex;
+  flex-direction: column ;
+  justify-content: space-around;
   align-items: center;
   align-self: center;
   text-align: center;
@@ -166,12 +167,12 @@ aside#cronometro {
   font-weight: bold;
   font-size: 9vw;
   width: max-content;
-  height: max-content;
+  height: 100vh;
   z-index: 23;
 }
 
 aside#cronometro > div {
-  padding-top: 20vh;
+  padding-top: 10vh;
 }
 
 aside > div#tempo {
