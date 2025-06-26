@@ -116,7 +116,7 @@ document.addEventListener("keyup", function (event) {
 ///Fazendo a parte do controle do timer no celular
 
 function tocar(){
-  if (cronometro) {
+  if (cronometro == null) {
       pausar();
       resetar();
     } else {
