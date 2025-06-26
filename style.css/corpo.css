@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(black,#1e6875);
+  background: linear-gradient(black, #0d3b81);
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -21,57 +21,56 @@ body {
   align-items: center;
   flex-direction: column;
 
-  & img{
+  & img {
     width: 40vw;
     height: 40vw;
     z-index: -20;
   }
-
 }
 
-#cubo::after{
-    content: '';
-    width: 46vw;
-    height: 46vw;
-    z-index: -21;
-    position: absolute;
-    display: block;
-    border-radius: 50%;
-    background-color: transparent;
-    border-bottom: 4px solid white;
-    animation: rodarcontra 15s infinite ;
+#cubo::after {
+  content: "";
+  width: 46vw;
+  height: 46vw;
+  z-index: -21;
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background-color: transparent;
+  border-bottom: 4px solid white;
+  animation: rodarcontra 15s infinite;
 }
-#cubo::before{
-    content: '';
-    width: 42vw;
-    height: 42vw;
-    z-index: -30;
-    position: absolute;
-    display: block;
-    border-radius: 50%;
-    background-color: transparent;
-    border-bottom: 2px solid white;
-    border-top:2px solid white;
-    border-left: 2px solid rgba(5, 205, 255, 0);
-    border-right: 2px solid rgba(5, 205, 255, 0);
-    animation: rodar 10s infinite ;
+#cubo::before {
+  content: "";
+  width: 42vw;
+  height: 42vw;
+  z-index: -30;
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+  border-left: 2px solid rgba(5, 205, 255, 0);
+  border-right: 2px solid rgba(5, 205, 255, 0);
+  animation: rodar 10s infinite;
 }
-@keyframes rodar{
-    0%{
-        transform: rotate(0);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
+@keyframes rodar {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-@keyframes rodarcontra{
-    0%{
-        transform: rotate(0);
-    }
-    100%{
-        transform: rotate(-360deg);
-    }
+@keyframes rodarcontra {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 nav {
   display: flex;
@@ -81,6 +80,7 @@ nav {
   margin: 0px;
   padding: 0;
   color: rgb(255, 255, 255);
+  z-index: 1;
 
   & span {
     align-content: center;
@@ -88,11 +88,11 @@ nav {
 
   & #menu {
     padding: 20px;
-    cursor: pointer;
   }
 
-  & #menu:hover {
+  #menu:hover {
     opacity: 0.7;
+    cursor: pointer;
   }
 }
 
@@ -187,22 +187,27 @@ aside#anotaçao {
 }
 
 .artigo {
-  display: flex;
+  display: none;
   width: 100vw;
   height: 100vh;
   align-items: center;
   justify-content: start;
   position: absolute;
+}
+
+.artigoaparece {
+  opacity: 1;
+  transition: all 1s;
+  filter: blur();
+}
+
+.artigosome{
   opacity: 0;
   transition: all 1s;
   filter: blur();
 }
 
-.artigoaparece{
-    opacity: 1;
-    transition: all 1s;
-    filter: blur();
-}
+
 
 .artigo > div {
   background: linear-gradient(#1c27ffb2, #71a5ff);
