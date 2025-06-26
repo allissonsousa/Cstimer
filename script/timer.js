@@ -114,7 +114,7 @@ document.addEventListener('keyup', function (event) {
 });
 
 ///Fazendo a parte do controle do timer no celular
-const element = document.getElementById('meuElemento');
+const element = document.getElementById('cronometro');
 
 element.addEventListener('touchstart', function(event) {
   // Código a ser executado quando o usuário tocar na tela
