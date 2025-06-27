@@ -96,11 +96,10 @@ nav {
   }
 }
 
-#menuItem {
+#menuItens {
   color: white;
-  display: none;
+  display: flex;
   position: absolute;
-  left: 0;
   top: 7%;
   padding: 10px;
   background-color: transparent;
@@ -110,14 +109,15 @@ nav {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  left: 1px;
+  left: 3px;
+  transition: all 1s;
 }
 
-#menuItem > div:hover {
+#menuItens > div:hover {
   opacity: 0.7;
 }
 
-#menuItem > div {
+#menuItens > div {
   background-color: transparent;
   width: 100px;
   height: 25px;
@@ -126,6 +126,18 @@ nav {
   font-style: normal;
   cursor: pointer;
   text-align: center;
+}
+
+.menuparece {
+  opacity: 1;
+  transition: all 1s;
+  filter: blur();
+}
+
+.menusome {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur();
 }
 
 #logo {
@@ -188,32 +200,35 @@ aside#anotaçao {
 }
 
 .artigo {
-  display: none;
+  display: flex;
   width: 100vw;
   height: 100vh;
   align-items: center;
   justify-content: start;
   position: absolute;
+  transition: all 1s;
 }
 
-.artigoaparece {
+.artigoaparece{
   opacity: 1;
   transition: all 1s;
   filter: blur();
+  transform: translateX(0px);
 }
 
 .artigosome{
   opacity: 0;
   transition: all 1s;
   filter: blur();
+  transform: translateX(-1000px);
 }
 
 
 
 .artigo > div {
-  background: linear-gradient(#1c27ffb2, #71a5ff);
+  background: linear-gradient(#1c27ff, #4deee6);
   width: 40vw;
-  height: 34vw;
+  height: 40vw;
   display: flex;
   position: relative;
   box-shadow: 1px 2px 20px rgb(255, 255, 255);
@@ -234,11 +249,11 @@ aside#anotaçao {
   display: block;
   align-items: center;
   text-align: center;
+  z-index: 20;
 }
 
 .fecha:hover {
   cursor: pointer;
-  background-color: gray;
 }
 
 #anotacaotempo {
