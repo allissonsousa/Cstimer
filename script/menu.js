@@ -1,4 +1,4 @@
-function surgeTempo() {
+function surgeMedia() {
   const artigo = document.getElementById("anotacaomedia");
   const tempo = document.getElementById("cronometro");
   if (artigo.classList.contains("artigosome")) {
@@ -8,10 +8,33 @@ function surgeTempo() {
   }
 }
 
+function surgeTempos() {
+  const artigo = document.getElementById("anotacaotempo");
+  const tempo = document.getElementById("cronometro");
+  if (artigo.classList.contains("artigosome")) {
+    artigo.classList.add("artigoaparece");
+    artigo.classList.remove("artigosome");
+    tempo.style.display = "none";
+  }
+}
+
+function surgeRecordes() {
+  const artigo = document.getElementById("anotacaorecordes");
+  const tempo = document.getElementById("cronometro");
+  if (artigo.classList.contains("artigosome")) {
+    artigo.classList.add("artigoaparece");
+    artigo.classList.remove("artigosome");
+    tempo.style.display = "none";
+  }
+}
+
+
 function fechaArtigo() {
-  const artigomedia = document.getElementById("anotacaomedia");
-  artigomedia.classList.add("artigosome");
-  artigomedia.classList.remove("artigoaparece");
+  const artigomedia = document.getElementsByClassName("artigoaparece");
+  for (let i = 0; i < artigomedia.length; i++) {
+    artigomedia[i].classList.add("artigosome");
+    artigomedia[i].classList.remove("artigoaparece");
+  }
 
   function artigo() {
     const tempo = document.getElementById("cronometro");
