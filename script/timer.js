@@ -84,6 +84,7 @@ function resetar() {
   document.getElementById("tempos").textContent = Tabela;
   document.getElementById("media").textContent = media;
   ordem();
+  recorde();  
 }
 
 // Inicia a exibição com 00:00:00
@@ -121,3 +122,18 @@ function tocar() {
     iniciar();
   }
 }
+
+function recorde(){
+  const atual = document.getElementById("recordeatual");
+  const antigo = document.getElementById("recordeantigo");
+    const record = "";
+    if (cont == 0){
+      record = item;
+    } else {
+      if (record <= item) {
+        record = item;
+        atual.textContent = record; 
+        antigo.textContent = record;
+      }
+    }
+  }

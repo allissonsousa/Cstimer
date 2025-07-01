@@ -225,12 +225,13 @@ aside#anotaçao {
   position: absolute;
   display: flex;
   width: 100%;
-  height: 80%;
+  height: 80vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: all 1s;
   z-index: 1;
+  
 }
 
 .artigoaparece {
@@ -253,8 +254,8 @@ aside#anotaçao {
   background: linear-gradient(#1c27ff, #00fff2);
   width: 40vw;
   height: 50vh;
-  min-width: 300px;
-  min-height: 400px;
+  min-width: 310px;
+  min-height: 440px;
   display: flex;
   position: relative;
   box-shadow: 1px 2px 20px rgba(255, 255, 255, 0.26);
@@ -270,9 +271,9 @@ aside#anotaçao {
   height: 49vh;
   position: absolute;
   color: rgb(255, 255, 255);
-  min-width: 290px;
-  min-height: 390px;
-  border-radius: 25px;
+  min-width: 300px;
+  min-height: 430px;
+  border-radius: 20px;
   text-align: center;
 }
 
