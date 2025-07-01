@@ -8,7 +8,6 @@ let soma = 0;
 let decorre = 0;
 let media = 0;
 let strnumero = "";
-let mediaValores = 0;
 let cont = 0;
 //isso aqui ta uma gambiarra do krai tenho q arrumar ta feio
 
@@ -48,13 +47,8 @@ function someApareceCodigo() {
   }
 }
 
-
 //Função que verifica qual é o novo recorde e qual é o antigo recorde
-function adicionaRecorde() {
-  const recordenovo = document.getElementById("recordeatual");
-  const recordeantigo = document.getElementById("recordeantigo");
 
-}
 
 function iniciar() {
   if (cronometro) return;
@@ -69,7 +63,7 @@ function pausar() {
   tempoDecorrido += Date.now() - tempoInicial;
   cronometro = null;
   decorre = tempoDecorrido;
-  Tabela.push(item);
+  adicionarDiv();
 }
 
 function resetar() {
@@ -81,10 +75,8 @@ function resetar() {
   soma += mediaValores;
   media = soma / cont;
   tempoDecorrido = 0;
-  document.getElementById("tempos").textContent = Tabela;
-  document.getElementById("media").textContent = media;
+  document.getElementById("media").textContent = Math.round(media);
   ordem();
-  recorde();  
 }
 
 // Inicia a exibição com 00:00:00
@@ -123,17 +115,11 @@ function tocar() {
   }
 }
 
-function recorde(){
-  const atual = document.getElementById("recordeatual");
-  const antigo = document.getElementById("recordeantigo");
-    const record = "";
-    if (cont == 0){
-      record = item;
-    } else {
-      if (record <= item) {
-        record = item;
-        atual.textContent = record; 
-        antigo.textContent = record;
-      }
-    }
-  }
+
+function adicionarDiv(){
+  var pai = document.getElementById("tempos");
+  var filho = document.createElement("div")
+  filho.textContent = (`${item} s`);
+  filho.classList.add("dados")
+  pai.appendChild(filho);
+}

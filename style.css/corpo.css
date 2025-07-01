@@ -277,6 +277,29 @@ aside#anotaçao {
   text-align: center;
 }
 
+#tempos{
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;  
+  flex-wrap: wrap;
+  overflow: scroll  ;
+}
+#tempos::-webkit-scrollbar{
+  color: transparent;
+}
+#tempos::-webkit-scrollbar-corner{
+  color: transparent;
+}
+.dados{
+  align-self: center;
+  display: block;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 2px; 
+}
+
 .artigo>img {
   height: 30vw;
   transform: translateY(3vw);
