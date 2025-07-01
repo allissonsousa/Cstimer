@@ -124,7 +124,7 @@ nav {
   justify-content: center;
   flex-direction: column;
   left: 3px;
-  transition: all 0.5s;
+  transition: all 1s;
   filter: blur();
 }
 
@@ -145,14 +145,15 @@ nav {
 
 .menuparece {
   opacity: 1;
-  transition: all 1s;
+  transition: all 1.4s;
   filter: blur();
 }
 
 .menusome {
   opacity: 0;
-  transition: all 1s;
+  transition: all 1.4s;
   filter: blur();
+  transform: translateX(-100px);
 }
 
 #logo {
@@ -254,8 +255,8 @@ aside#anotaçao {
   background: linear-gradient(#1c27ff, #00fff2);
   width: 40vw;
   height: 50vh;
-  min-width: 310px;
-  min-height: 440px;
+  min-width: 280px;
+  min-height: 400px;
   display: flex;
   position: relative;
   box-shadow: 1px 2px 20px rgba(255, 255, 255, 0.26);
@@ -271,8 +272,8 @@ aside#anotaçao {
   height: 49vh;
   position: absolute;
   color: rgb(255, 255, 255);
-  min-width: 300px;
-  min-height: 430px;
+  min-width: 270px;
+  min-height: 390px;
   border-radius: 20px;
   text-align: center;
 }

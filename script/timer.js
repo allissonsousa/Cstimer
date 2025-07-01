@@ -36,6 +36,7 @@ function atualizarTempo() {
     tempoFinal = `${minutos}:${segundos}:${milissegundos}`; //gambiarra pra mostrar só as casas de unidades que contem valor
   }
 
+  itemnumerado = `${minutos}${segundos}.${milissegundos}`;
   item = tempoFinal;
   document.getElementById("tempo").textContent = tempoFinal;
 }
@@ -75,8 +76,9 @@ function resetar() {
   soma += mediaValores;
   media = soma / cont;
   tempoDecorrido = 0;
-  document.getElementById("media").textContent = Math.round(media);
+  document.getElementById("media").textContent = media;
   ordem();
+  adicionarRecordes();
 }
 
 // Inicia a exibição com 00:00:00
@@ -122,4 +124,14 @@ function adicionarDiv(){
   filho.textContent = (`${item} s`);
   filho.classList.add("dados")
   pai.appendChild(filho);
+}
+
+
+function adicionarRecordes(){
+  const record = document.getElementById("recordeatual");
+  if (record === ""){
+    record.textContent = itemnumerado;
+  } else if (record < itemnumerado){
+    record.textContent = itemnumerado;
+  }
 }

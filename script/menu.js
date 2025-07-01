@@ -12,6 +12,7 @@ function surgeTempos() {
   const artigo = document.getElementById("anotacaotempo");
   const tempo = document.getElementById("cronometro");
   if (artigo.classList.contains("artigosome")) {
+    artigo.style.display = "flex";
     artigo.classList.add("artigoaparece");
     artigo.classList.remove("artigosome");
     tempo.style.display = "none";
@@ -22,6 +23,7 @@ function surgeRecordes() {
   const artigo = document.getElementById("anotacaorecordes");
   const tempo = document.getElementById("cronometro");
   if (artigo.classList.contains("artigosome")) {
+    artigo.style.display = "flex";
     artigo.classList.add("artigoaparece");
     artigo.classList.remove("artigosome");
     tempo.style.display = "none";
