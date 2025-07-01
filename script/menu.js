@@ -54,3 +54,8 @@ function abreFecha() {
     submenu.classList.remove("menuaparece");
   }
 }
+
+function embassar() {
+  const principalmain = document.getElementById("principalmain");
+  principalmain.style.filter = "blur(1)";
+}

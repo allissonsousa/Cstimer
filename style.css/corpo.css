@@ -11,6 +11,7 @@ body {
   box-sizing: border-box;
 }
 
+
 #cubo {
   position: absolute;
   justify-content: center;
@@ -115,7 +116,7 @@ nav {
   display: flex;
   position: absolute;
   top: 50px;
-  padding: 10px;
+  padding: 5px;
   background-color: rgb(0, 12, 36);
   border: 1px solid white;
   border-radius: 10px;
@@ -135,7 +136,7 @@ nav {
   background-color: transparent;
   width: 100px;
   height: 25px;
-  padding: 5px;
+  padding: 3px;
   color: white;
   font-style: normal;
   cursor: pointer;
@@ -179,6 +180,10 @@ main {
   flex-direction: column;
 }
 
+#principalmain {
+  filter: blur();
+}
+
 #random {
   display: block;
   font-size: 3vw;
@@ -195,8 +200,9 @@ aside#cronometro {
   font-weight: bold;
   font-size: 9vw;
   width: max-content;
-  height: 100vh;
+  height: 80vh;
   z-index: 0;
+  position: absolute;
 }
 
 aside#cronometro>div {
@@ -259,11 +265,11 @@ aside#anotaçao {
 }
 
 .artigo>div>main {
-  background-color: black;
+  background-color: rgba(117, 108, 108, 0.61);
   width: 39vw;
   height: 49vh;
   position: absolute;
-  color: white;
+  color: rgb(255, 255, 255);
   min-width: 290px;
   min-height: 390px;
   border-radius: 25px;
@@ -300,7 +306,7 @@ footer {
   height: 5%;
   display: flex;
   position: absolute;
-  bottom: 0;
+  bottom: 1px;
   justify-content: center;
   text-align: center;
   align-items: center;
