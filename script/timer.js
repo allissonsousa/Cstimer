@@ -48,13 +48,12 @@ function someApareceCodigo() {
   }
 }
 
-function adicionarLinha() {
-  const tabela = document
-    .getElementById("itensTempo")
-    .getElementsByTagName("tbody")[0];
-  const novaLinha = tabela.insertRow();
-  const celulaTempo = novaLinha.insertCell();
-  celulaTempo.textContent = item;
+
+//Função que verifica qual é o novo recorde e qual é o antigo recorde
+function adicionaRecorde() {
+  const recordenovo = document.getElementById("recordeatual");
+  const recordeantigo = document.getElementById("recordeantigo");
+
 }
 
 function iniciar() {
@@ -85,7 +84,6 @@ function resetar() {
   document.getElementById("tempos").textContent = Tabela;
   document.getElementById("media").textContent = media;
   ordem();
-  adicionarLinha();
 }
 
 // Inicia a exibição com 00:00:00
@@ -115,11 +113,11 @@ document.addEventListener("keyup", function (event) {
 
 ///Fazendo a parte do controle do timer no celular
 
-function tocar(){
+function tocar() {
   if (cronometro) {
-      pausar();
-      resetar();
-    } else {
-      iniciar();
-    }
+    pausar();
+    resetar();
+  } else {
+    iniciar();
+  }
 }
