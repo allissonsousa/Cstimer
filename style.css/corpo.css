@@ -281,7 +281,7 @@ aside#anotaçao {
 .artigo>div>main {
   background-color: rgba(117, 108, 108, 0.61);
   width: 39vw;
-  height: 49vh;
+  height: 30vh;
   position: absolute;
   color: rgb(255, 255, 255);
   min-width: 270px;
