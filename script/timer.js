@@ -130,18 +130,18 @@ function adicionarDiv(){
 function adicionarRecordes(){
   const record = document.getElementById("recordeatual");
   const lastrec = document.getElementById("recordeantigo");
-  let numerado = parseInt(itemnumerado);
-  const atual = 0;
-  const antigo = 0;
+  const numerado = parseInt(itemnumerado);
+  let atual = 0;
+  let antigo = 0;
   let contar = 0;
   if (contar == 0){
-    record.textContent = numerado;
+    record.textContent = item;
     atual = numerado;
     contar += 1; 
   } else if (cont != 0 || atual> numerado){
     atual = numerado;
     antigo = atual;
-    record.textContent = atual;
+    record.textContent = item;
     lastrec.textContent = antigo;
   }
 }
