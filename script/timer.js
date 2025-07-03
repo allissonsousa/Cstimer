@@ -36,7 +36,7 @@ function atualizarTempo() {
     tempoFinal = `${minutos}:${segundos}:${milissegundos}`; //gambiarra pra mostrar só as casas de unidades que contem valor
   }
 
-  itemnumerado = `${minutos}${segundos}.${milissegundos}`;
+  itemnumerado = `${minutos}${segundos}${milissegundos}`;
   item = tempoFinal;
   document.getElementById("tempo").textContent = tempoFinal;
 }
@@ -120,7 +120,7 @@ function tocar() {
 
 function adicionarDiv(){
   var pai = document.getElementById("tempos");
-  var filho = document.createElement("div")
+  var filho = document.createElement("div");
   filho.textContent = (`${item} s`);
   filho.classList.add("dados")
   pai.appendChild(filho);
@@ -129,9 +129,19 @@ function adicionarDiv(){
 
 function adicionarRecordes(){
   const record = document.getElementById("recordeatual");
-  if (record === ""){
-    record.textContent = itemnumerado;
-  } else if (record < itemnumerado){
-    record.textContent = itemnumerado;
+  const lastrec = document.getElementById("recordeantigo");
+  let numerado = parseInt(itemnumerado);
+  const atual = 0;
+  const antigo = 0;
+  let contar = 0;
+  if (contar == 0){
+    record.textContent = numerado;
+    atual = numerado;
+    contar += 1; 
+  } else if (cont != 0 || atual> numerado){
+    atual = numerado;
+    antigo = atual;
+    record.textContent = atual;
+    lastrec.textContent = antigo;
   }
 }
