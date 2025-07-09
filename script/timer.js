@@ -152,12 +152,13 @@ function adicionarRecordes() {
   const record = document.getElementById("recordeatual");
   const lastrec = document.getElementById("recordeantigo");
   const numerado = parseInt(itemnumerado);
-  
+
   if (contar == null) {
     atual.push(numerado);
     stratual.push(item);
     record.textContent = item;
     contar = 1;
+    primeirorecorde();
   } else {
     if (atual[0] > numerado) {
       antigo.length = 0
@@ -171,8 +172,26 @@ function adicionarRecordes() {
       stratual.push(item);
       record.textContent = stratual;
       lastrec.textContent = strantigo;
+
+      quebrarecorde();
     }
   }
 
 
+}
+
+//adicção de um emitidor de mensagens que sera chamado pela função que monitora a mudança nos recordes
+
+function primeirorecorde() {
+  alert("parabens por iniciar seu treino, continue com essa determinação");
+}
+
+function quebrarecorde() {
+  const mensagens = ["Parabéns, voce bateu seu recorde antigo, continue assim 😉🤙 ",
+    "Você atingiu um novo recorde, parabéns velocista 😁🤝",
+    "Parece que as coisas estão ficando quentes por aqui 🥵, parabéns pelo seu novo recorde!😉",
+    "Isso que eu chamo de mãos magicas, você atingiu um novo melhor tempo 🤌",
+    "Seu esforço está sendo compensado, você atingiu um novo marco e diminuiu seu recorde!!😎 "]
+  indice = Math.floor(Math.random() * 5);
+  alert(mensagens[indice]);
 }
