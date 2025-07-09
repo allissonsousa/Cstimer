@@ -195,3 +195,11 @@ function quebrarecorde() {
   indice = Math.floor(Math.random() * 5);
   alert(mensagens[indice]);
 }
+
+function monitoramedias() {
+  if (desempenho == melhorando) {
+    alert("Sua média tem melhorando constantemente !! Continue assim 😁🤝 ")
+  } else if (desempenho == piorando) {
+    alert("Sua média está caindo, talvez seja melhor você dar uma olhadas nas dicas de permutação no menu de acesso 🖋️📖 ")
+  }
+}
