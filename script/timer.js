@@ -37,6 +37,7 @@ function atualizarTempo() {
   }
 
   itemnumerado = `${minutos}${segundos}${milissegundos}`;
+  itemnumerado2 = `${minutos}${segundos}.${milissegundos}`;
   item = tempoFinal;
   document.getElementById("tempo").textContent = tempoFinal;
 }
@@ -76,13 +77,12 @@ function pausar() {
 function resetar() {
   pausar();
   atualizarTempo();
-  strnumero = decorre.toString().slice(0, -1);
-  mediaValores = parseInt(strnumero);
+  let mediaValores = parseFloat(itemnumerado2);
   cont += 1;
   soma += mediaValores;
   media = soma / cont;
   tempoDecorrido = 0;
-  document.getElementById("media").textContent = media;
+  document.getElementById("media").textContent = `${media.toFixed(2)} segundos` ;
   ordem();
   adicionarRecordes();
 }
@@ -190,7 +190,7 @@ function quebrarecorde() {
   const mensagens = ["Parabéns, voce bateu seu recorde antigo, continue assim 😉🤙 ",
     "Você atingiu um novo recorde, parabéns velocista 😁🤝",
     "Parece que as coisas estão ficando quentes por aqui 🥵, parabéns pelo seu novo recorde!😉",
-    "Isso que eu chamo de mãos magicas, você atingiu um novo melhor tempo 🤌",
+    "Isso que eu chamo de mãos magicas, você atingiu um novo melhor tempo 😉🤙 ",
     "Seu esforço está sendo compensado, você atingiu um novo marco e diminuiu seu recorde!!😎 "]
   indice = Math.floor(Math.random() * 5);
   alert(mensagens[indice]);
