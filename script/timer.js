@@ -82,7 +82,7 @@ function resetar() {
   soma += mediaValores;
   media = soma / cont;
   tempoDecorrido = 0;
-  document.getElementById("media").textContent = `${media.toFixed(2)} segundos` ;
+  document.getElementById("media").textContent = `${media.toFixed(2)} sec` ;
   ordem();
   adicionarRecordes();
 }
@@ -135,7 +135,7 @@ function tocar() {
 function adicionarDiv() {
   var pai = document.getElementById("tempos");
   var filho = document.createElement("div");
-  filho.textContent = `${item} s`;
+  filho.textContent = `${item} sec`;
   filho.classList.add("dados");
   pai.appendChild(filho);
 }
@@ -156,7 +156,7 @@ function adicionarRecordes() {
   if (contar == null) {
     atual.push(numerado);
     stratual.push(item);
-    record.textContent = item;
+    record.textContent = `${stratual} sec`;
     contar = 1;
     primeirorecorde();
   } else {
@@ -170,8 +170,8 @@ function adicionarRecordes() {
       strantigo.push(stratual[0]);
       stratual.length = 0;
       stratual.push(item);
-      record.textContent = stratual;
-      lastrec.textContent = strantigo;
+      record.textContent = `${stratual} sec`;
+      lastrec.textContent = `${strantigo} sec`;
 
       quebrarecorde();
     }

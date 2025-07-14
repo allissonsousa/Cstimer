@@ -265,13 +265,13 @@ aside#anotaçao {
 
 .artigo>div {
   background: linear-gradient(#1c27ff, #00fff2);
-  width: 30vw;
+  width: 25vw;
   height: 200px;
-  min-width: 190px;
+  min-width: 260px;
   min-height: 300px;
   display: flex;
   position: relative;
-  box-shadow: 1px 2px 20px rgba(255, 255, 255, 0.26);
+  box-shadow: 1px 2px 20px rgba(255, 255, 255, 0.479);
   border-radius: 25px;
   align-items: center;
   justify-content: center;
@@ -279,7 +279,7 @@ aside#anotaçao {
 }
 
 .artigo>div>main {
-  background-color: rgba(117, 108, 108, 0.61);
+  background-color: rgba(15, 25, 58, 0.774);
   width: 100%;
   height: 97%;
   margin: 5px;
@@ -305,20 +305,26 @@ aside#anotaçao {
 .dados{
   align-self: center;
   display: block;
-  border: 2px solid white;
+  border: 1px solid white;
   padding: 10px;
   border-radius: 5px;
-  margin: 2px; 
+  margin: 1px; 
 }
 
 .artigo>img {
-  height: 30vw;
-  transform: translateY(3vw);
+  width: 28vw;
+  transform: translateY(2vw);
 }
-
+.metas {
+  display: flex;
+  align-self: center;
+  justify-content: space space-between;
+  padding: 10px;
+  
+}
 .fecha {
-  width: 23px;
-  height: 23px;
+  width: 15px;
+  height: 15px;
   display: block;
   align-items: center;
   text-align: center;

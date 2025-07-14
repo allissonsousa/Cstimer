@@ -1,87 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css/corpo.css" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../style.css/corpo.css" />
-  <title>Document</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
-
-</head>
-
-<body onload="ordem()" id="corpo">
-  <article id="cubo">
-    <img src="../resources/cubo-3d.png" alt="" />
-  </article>
-  <nav>
-    <span id="menu" onclick="abreFecha()"> <img width="20" height="20"
-        src="https://img.icons8.com/3d-fluency/94/menu.png" alt="menu" /> </span>
-    <div id="menuItens" class="menusome">
-      <div onclick="surgeTempos() ,abreFecha()">Tempos</div>
-      <div onclick="surgeMedia() ,abreFecha()">Média</div>
-      <div onclick="surgeRecordes() ,abreFecha()">Recordes</div>
-      <div>
-        <a href="https://www.blog.oncube.com.br/tutoriais/tutorial-3x3x3/#:~:text=Tutorial%20do%20cubo%20m%C3%A1gico%203x3x3%2C%20conhe%C3%A7a%20seus%20movimentos%2C,e%20o%20avan%C3%A7ado.%20Aprenda%20a%20resolver%20em%20segundos."
-          target="blank" style="color: white; text-decoration: none">Dicas</a>
-      </div>
-    </div>
-    <span id="logo"><a href="home.html">Speed Cubbee <img src="../resources/cubo-3d.png"
-          alt="pagina principal" /></a></span>
-    <span id="icone"><a href="logon.html"><img src="../resources/do-utilizador.png" alt="login" /></a></span>
-  </nav>
-  <main id="principalmain">
-    <aside id="cronometro" onclick="tocar()">
-      <div id="random"></div>
-      <div id="tempo"></div>
-      <div></div>
-    </aside>
-    <article class="artigo artigosome" id="anotacaotempo">
-      <img src="../resources/preguiça.png.png" alt="preguicinha" />
-      <div>
-        <main>
-          <img onclick="fechaArtigo()" class="fecha" src="../resources/cruz.png" alt="fechar">
-          <h1>Seus ultimos tempos</h1>
-          <span id="tempos"></span>
-        </main>
-      </div>
+  <body onload="ordem()" id="corpo">
+    <article id="cubo">
+      <img src="../resources/cubo-3d.png" alt="" />
     </article>
-    <article class="artigo artigosome" id="anotacaomedia">
-      <img src="../resources/preguiça.png.png" alt="preguicinha" />
-      <div>
-        <main>
-          <img onclick="fechaArtigo()" class="fecha" src="../resources/cruz.png" alt="fechar">
-          <h1>Média atual dos seus tempos</h1>
-          <span id="media" class="dados"></span>
-        </main>
+    <nav>
+      <span id="menu" onclick="abreFecha()">
+        <img
+          width="20"
+          height="20"
+          src="https://img.icons8.com/3d-fluency/94/menu.png"
+          alt="menu"
+        />
+      </span>
+      <div id="menuItens" class="menusome">
+        <div onclick="surgeTempos() ,abreFecha()">Tempos</div>
+        <div onclick="surgeMedia() ,abreFecha()">Média</div>
+        <div onclick="surgeRecordes() ,abreFecha()">Recordes</div>
+        <div>
+          <a
+            href="https://www.blog.oncube.com.br/tutoriais/tutorial-3x3x3/#:~:text=Tutorial%20do%20cubo%20m%C3%A1gico%203x3x3%2C%20conhe%C3%A7a%20seus%20movimentos%2C,e%20o%20avan%C3%A7ado.%20Aprenda%20a%20resolver%20em%20segundos."
+            target="blank"
+            style="color: white; text-decoration: none"
+            >Dicas</a
+          >
+        </div>
       </div>
-    </article>
-    <article class="artigo artigosome" id="anotacaorecordes">
-      <img src="../resources/preguiça.png.png" alt="preguicinha" />
-      <div>
-        <main>
-          <img onclick="fechaArtigo()" class="fecha" src="../resources/cruz.png" alt="fechar">
-          <h1>Seus Recordes</h1>
-          <p>Seu recorde atual</p>
-          <span id="recordeatual" class="dados"></span>
-          <p>Seu recorde antigo</p>
-          <span id="recordeantigo" class="dados"></span>
-        </main>
-      </div>
-    </article>
-  </main>
-  <footer>
-    <p>Criado por Allisson Sousa</p>
-    <a href="https://github.com/allissonsousa" target="_blank"><img class="footerimg" src="../resources/rounded.png"
-        alt="" /></a>
-    <a href="https://www.linkedin.com/in/alllisson-sousa-541b39296" target="blank"><img class="footerimg"
-        src="../resources/linkedin.png" alt="" /></a>
-  </footer>
-  <script src="../script/menu.js"></script>
-  <script src="../script/ordem.js"></script>
-  <script src="../script/timer.js"></script>
-</body>
-
+      <span id="logo"
+        ><a href="home.html"
+          >Speed Cubbee
+          <img src="../resources/cubo-3d.png" alt="pagina principal" /></a
+      ></span>
+      <span id="icone"
+        ><a href="logon.html"
+          ><img src="../resources/do-utilizador.png" alt="login" /></a
+      ></span>
+    </nav>
+    <main id="principalmain">
+      <aside id="cronometro" onclick="tocar()">
+        <div id="random"></div>
+        <div id="tempo"></div>
+        <div></div>
+      </aside>
+      <article class="artigo artigosome" id="anotacaotempo">
+        <img src="../resources/preguiça.png.png" alt="preguicinha" />
+        <div>
+          <main>
+            <img
+              onclick="fechaArtigo()"
+              class="fecha"
+              src="../resources/cruz.png"
+              alt="fechar"
+            />
+            <h1>Seus ultimos tempos</h1>
+            <span id="tempos"></span>
+          </main>
+        </div>
+      </article>
+      <article class="artigo artigosome" id="anotacaomedia">
+        <img src="../resources/preguiça.png.png" alt="preguicinha" />
+        <div>
+          <main>
+            <img
+              onclick="fechaArtigo()"
+              class="fecha"
+              src="../resources/cruz.png"
+              alt="fechar"
+            />
+            <h1>Média atual dos seus tempos</h1>
+            <span id="media" class="dados"></span>
+          </main>
+        </div>
+      </article>
+      <article class="artigo artigosome" id="anotacaorecordes">
+        <img src="../resources/preguiça.png.png" alt="preguicinha" />
+        <div>
+          <main>
+            <img
+              onclick="fechaArtigo()"
+              class="fecha"
+              src="../resources/cruz.png"
+              alt="fechar"
+            />
+            <h1>Seus Recordes</h1>
+            <div class="metas">
+              <p>Seu recorde atual......</p>
+              <span id="recordeatual" class="dados"></span>
+            </div>
+            <div class="metas">
+              <p>Seu recorde antigo......</p>
+              <span id="recordeantigo" class="dados"></span>
+            </div>
+          </main>
+        </div>
+      </article>
+    </main>
+    <footer>
+      <p>Criado por Allisson Sousa</p>
+      <a href="https://github.com/allissonsousa" target="_blank"
+        ><img class="footerimg" src="../resources/rounded.png" alt=""
+      /></a>
+      <a
+        href="https://www.linkedin.com/in/alllisson-sousa-541b39296"
+        target="blank"
+        ><img class="footerimg" src="../resources/linkedin.png" alt=""
+      /></a>
+    </footer>
+    <script src="../script/menu.js"></script>
+    <script src="../script/ordem.js"></script>
+    <script src="../script/timer.js"></script>
+  </body>
 </html>
