@@ -9,16 +9,16 @@ let decorre = 0;
 let media = 0;
 let strnumero = "";
 let cont = 0;
-//isso aqui ta uma gambiarra do krtenho q arrumar ta feio
+//isso aqui ta uma gambiarra do kr tenho q arrumar ta feio
 
 function atualizarTempo() {
   //funçao do cronometro que conta o tempo e atualiza os digitos do relogio na tela
   const agora = Date.now();
   const tempoAtual = tempoDecorrido + (cronometro ? agora - tempoInicial : 0);
 
-  const minutos = String(Math.floor(tempoAtual / 60000)).padStart(2, "0");
+  const minutos = String(Math.floor(tempoAtual / 60000)).padStart(1, "0");
   const segundos = String(Math.floor((tempoAtual % 60000) / 1000)).padStart(
-    2,
+    1,
     "0"
   );
   const milissegundos = String(Math.floor((tempoAtual % 1000) / 10)).padStart(
@@ -26,20 +26,22 @@ function atualizarTempo() {
     "0"
   ); // centésimos
 
-  if (minutos == "00" && segundos == "00" && milissegundos == "00") {
+  if (minutos == "0" && segundos == "0" && milissegundos == "00") {
     tempoFinal = "";
-  } else if (minutos == "00" && segundos == "00") {
-    tempoFinal = `${milissegundos}`;
-  } else if (minutos == "00") {
-    tempoFinal = `${segundos}:${milissegundos}`;
+    milifinal = "";
+  } else if (minutos == "0") {
+    tempoFinal = `${segundos}.`;
+    milifinal = milissegundos;
   } else {
-    tempoFinal = `${minutos}:${segundos}:${milissegundos}`; //gambiarra pra mostrar só as casas de unidades que contem valor
+    milifinal = milissegundos;
+    tempoFinal = `${minutos}:${segundos}.`; //gambiarra pra mostrar só as casas de unidades que contem valor
   }
 
   itemnumerado = `${minutos}${segundos}${milissegundos}`;
   itemnumerado2 = `${minutos}${segundos}.${milissegundos}`;
-  item = tempoFinal;
+  item = `${tempoFinal}${milissegundos}`;
   document.getElementById("tempo").textContent = tempoFinal;
+  document.getElementById("milisec").textContent = milifinal;
 }
 
 //Função responsavel por omitir a ordem de embaralhamento da tela
@@ -50,7 +52,6 @@ function someApareceCodigo() {
     codigo.textContent = "";
   }
 }
-
 
 //Função que inicia o cronometro e omite o codigo na tela
 
@@ -82,16 +83,13 @@ function resetar() {
   soma += mediaValores;
   media = soma / cont;
   tempoDecorrido = 0;
-  document.getElementById("media").textContent = `${media.toFixed(2)} sec` ;
+  document.getElementById("media").textContent = `${media.toFixed(2)} sec`;
   ordem();
   adicionarRecordes();
 }
 
 // Inicia a exibição com 00:00:00
 atualizarTempo();
-
-
-
 
 // 🧠 Mapeamento de teclas para funções
 const teclasFuncoes = {
@@ -106,15 +104,17 @@ const teclasFuncoes = {
   },
 };
 
-// 🎯 Ouvinte genérico de teclado
+// 🎯 Ouvinte genérico de teclado para cima
 
 document.addEventListener("keyup", function (event) {
-  const tecla = event.key.toLowerCase();
+  const tecla = event.key.toUpperCase();
   if (teclasFuncoes[tecla]) {
     event.preventDefault(); // evitar ações padrão (como rolagem)
     teclasFuncoes[tecla]();
   }
 });
+
+// 🎯 Ouvinte genérico de teclado para baixo segurando
 
 
 
@@ -128,7 +128,6 @@ function tocar() {
     iniciar();
   }
 }
-
 
 // Função que armazena todos os tempos criando divs
 
@@ -161,12 +160,12 @@ function adicionarRecordes() {
     primeirorecorde();
   } else {
     if (atual[0] > numerado) {
-      antigo.length = 0
+      antigo.length = 0;
       antigo.push(atual[0]);
       atual.length = 0;
       atual.push(numerado);
 
-      strantigo.length = 0
+      strantigo.length = 0;
       strantigo.push(stratual[0]);
       stratual.length = 0;
       stratual.push(item);
@@ -176,8 +175,6 @@ function adicionarRecordes() {
       quebrarecorde();
     }
   }
-
-
 }
 
 //adicção de um emitidor de mensagens que sera chamado pela função que monitora a mudança nos recordes
@@ -187,19 +184,23 @@ function primeirorecorde() {
 }
 
 function quebrarecorde() {
-  const mensagens = ["Parabéns, voce bateu seu recorde antigo, continue assim 😉🤙 ",
+  const mensagens = [
+    "Parabéns, voce bateu seu recorde antigo, continue assim 😉🤙 ",
     "Você atingiu um novo recorde, parabéns velocista 😁🤝",
     "Parece que as coisas estão ficando quentes por aqui 🥵, parabéns pelo seu novo recorde!😉",
     "Isso que eu chamo de mãos magicas, você atingiu um novo melhor tempo 😉🤙 ",
-    "Seu esforço está sendo compensado, você atingiu um novo marco e diminuiu seu recorde!!😎 "]
+    "Seu esforço está sendo compensado, você atingiu um novo marco e diminuiu seu recorde!!😎 ",
+  ];
   indice = Math.floor(Math.random() * 5);
   alert(mensagens[indice]);
 }
 
 function monitoramedias() {
   if (desempenho == melhorando) {
-    alert("Sua média tem melhorando constantemente !! Continue assim 😁🤝 ")
+    alert("Sua média tem melhorando constantemente !! Continue assim 😁🤝 ");
   } else if (desempenho == piorando) {
-    alert("Sua média está caindo, talvez seja melhor você dar uma olhadas nas dicas de permutação no menu de acesso 🖋️📖 ")
+    alert(
+      "Sua média está caindo, talvez seja melhor você dar uma olhadas nas dicas de permutação no menu de acesso 🖋️📖 "
+    );
   }
 }

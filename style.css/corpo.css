@@ -222,8 +222,13 @@ aside#cronometro>div {
   padding-top: 10vh;
 }
 
-aside>div#tempo {
+#tempoformatado {
   font-family: "Press Start 2P", system-ui;
+  display: flex;
+}
+#milisec {
+  font-size: 10pt;
+  transform: translateY(12px);
 }
 
 aside#anotaçao {
