@@ -1,4 +1,5 @@
 body {
+  font-family: "Orbitron", system-ui;
   background: linear-gradient(black, #0d3b81);
   width: 100vw;
   height: 100vh;
@@ -200,6 +201,7 @@ main {
 #random {
   display: block;
   font-size: 3vw;
+  max-width: 820px;
 }
 
 aside#cronometro {
@@ -223,12 +225,15 @@ aside#cronometro>div {
 }
 
 #tempoformatado {
-  font-family: "Press Start 2P", system-ui;
+  font-family: "Orbitron", system-ui;
+  font-weight: 600;
   display: flex;
+  transform: translateX(-3vw);
 }
 #milisec {
-  font-size: 10pt;
-  transform: translateY(12px);
+  font-size: 60%;
+  transform: translateY(3vw);
+  width: 20px;
 }
 
 aside#anotaçao {
@@ -269,27 +274,27 @@ aside#anotaçao {
 
 
 .artigo>div {
-  background: linear-gradient(#1c27ff, #00fff2);
+  background: linear-gradient(#181bccc4, #00fff2);
   width: 25vw;
   height: 200px;
   min-width: 260px;
   min-height: 300px;
   display: flex;
   position: relative;
-  box-shadow: 1px 2px 20px rgba(255, 255, 255, 0.479);
-  border-radius: 25px;
+  box-shadow: 0px 0px 20px rgb(241, 239, 239);
+  border-radius: 10px;
   align-items: center;
   justify-content: center;
   transform: translateY(-6.5vw);
 }
 
 .artigo>div>main {
-  background-color: rgba(15, 25, 58, 0.774);
+  background-color: rgba(19, 11, 48, 0.637);
   width: 100%;
   height: 97%;
   margin: 5px;
   color: rgb(255, 255, 255);
-  border-radius: 20px;
+  border-radius: 10px;
   text-align: center;
 }
 

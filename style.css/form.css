@@ -1,4 +1,5 @@
 body {
+  font-family: "Orbitron", system-ui;
   background: linear-gradient(black, #0d3b81);
   width: 100vw;
   max-height: 100vh;
@@ -59,7 +60,7 @@ main>div {
   display: flex;
   position: relative;
   box-shadow: 1px 2px 20px rgba(255, 255, 255, 0.26);
-  border-radius: 25px;
+  border-radius: 10px;
   align-items: center;
   justify-content: center;
   transform: translateY(-6.5vw);
@@ -73,7 +74,7 @@ form{
   color: rgb(255, 255, 255);
   min-width: 270px;
   min-height: 390px;
-  border-radius: 20px;
+  border-radius: px;
   text-align: center;
   align-items: center;
   display: flex;
