@@ -2,4 +2,4 @@ Sou afixionado em cubo mágicos, eu mesmo me considero um cubista mesmo não sen
 Site feito com o proposito de cronometrar tempos de resolução de cubo magico 3x3, o site apresenta medias, tempos, melhores tempos e dicas, ainda esta em construção.
 O site usa um sistema simples com JavaScript, html e Css.
 Pretendo incorporar um sistema de login para salvar os tempos e marcos do usuário.
-Acesse o site> >https://allissonsousa.github.io/SpeedCubee-timer/site/home.html
+Acesse o site> >https://allissonsousa.github.io/SpeedCubee-Timer/site/home.html
