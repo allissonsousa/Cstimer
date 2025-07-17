@@ -1,33 +1,60 @@
 function surgeMedia() {
-  const artigo = document.getElementById("anotacaomedia");
-  const tempo = document.getElementById("cronometro");
-  if (artigo.classList.contains("artigosome")) {
-    artigo.classList.add("artigoaparece");
-    artigo.classList.remove("artigosome");
-    tempo.style.display = "none";
+
+  function media() {
+    const artigo = document.getElementById("anotacaomedia");
+    const tempo = document.getElementById("cronometro");
+    if (artigo.classList.contains("artigosome")) {
+      artigo.classList.add("artigoaparece");
+      artigo.classList.remove("artigosome");
+      function some() {
+        tempo.style.display = "none";
+      }
+      setTimeout(some, 300);
+    }
   }
+
+  fechaArtigo();
+  abreFecha();
+  setTimeout(media, 200);
 }
 
 function surgeTempos() {
-  const artigo = document.getElementById("anotacaotempo");
-  const tempo = document.getElementById("cronometro");
-  if (artigo.classList.contains("artigosome")) {
-    artigo.style.display = "flex";
-    artigo.classList.add("artigoaparece");
-    artigo.classList.remove("artigosome");
-    tempo.style.display = "none";
+  function tempos() {
+    const artigo = document.getElementById("anotacaotempo");
+    const tempo = document.getElementById("cronometro");
+    if (artigo.classList.contains("artigosome")) {
+      artigo.style.display = "flex";
+      artigo.classList.add("artigoaparece");
+      artigo.classList.remove("artigosome");
+      function some() {
+        tempo.style.display = "none";
+      }
+      setTimeout(some, 300);
+    }
   }
+
+  fechaArtigo();
+  abreFecha();
+  setTimeout(tempos, 200);
 }
 
 function surgeRecordes() {
-  const artigo = document.getElementById("anotacaorecordes");
-  const tempo = document.getElementById("cronometro");
-  if (artigo.classList.contains("artigosome")) {
-    artigo.style.display = "flex";
-    artigo.classList.add("artigoaparece");
-    artigo.classList.remove("artigosome");
-    tempo.style.display = "none";
+  function record() {
+    const artigo = document.getElementById("anotacaorecordes");
+    const tempo = document.getElementById("cronometro");
+    if (artigo.classList.contains("artigosome")) {
+      artigo.style.display = "flex";
+      artigo.classList.add("artigoaparece");
+      artigo.classList.remove("artigosome");
+      function some() {
+        tempo.style.display = "none";
+      }
+      setTimeout(some, 300);
+    }
   }
+  fechaArtigo();
+  abreFecha();
+  setTimeout(record, 200);
 }
 
 
@@ -57,7 +84,3 @@ function abreFecha() {
   }
 }
 
-function embassar() {
-  const principalmain = document.getElementById("principalmain");
-  principalmain.style.filter = "blur(1)";
-}
