@@ -49,21 +49,21 @@ main {
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
 }
 main>div {
   background: linear-gradient(#1c27ff, #00fff2);
   width: 40vw;
   height: 50vh;
-  min-width: 280px;
-  min-height: 400px;
+  min-width: 220px;
+  min-height: 300px;
+  max-width: 310px;
   display: flex;
   position: relative;
   box-shadow: 1px 2px 20px rgba(255, 255, 255, 0.26);
   border-radius: 10px;
   align-items: center;
   justify-content: center;
-  transform: translateY(-6.5vw);
 }
 
 form{
@@ -72,9 +72,10 @@ form{
   height: 49vh;
   position: absolute;
   color: rgb(255, 255, 255);
-  min-width: 270px;
-  min-height: 390px;
-  border-radius: px;
+  min-width: 210px;
+  min-height: 280px;
+  max-width: 300px;
+  border-radius: 10px;
   text-align: center;
   align-items: center;
   display: flex;

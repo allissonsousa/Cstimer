@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/form.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Press+Start+2P&family=Rubik+80s+Fade&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <span id="logo"><a href="home.html">Speed Cubbee <img src="../resources/cubo-3d.png" alt="pagina principal" /></a></span>
+    </nav>
+    <main>
+      <div>
+        <form action="/login" method="POST">
+          <label for="username">E-mail:</label>
+          <input type="text" id="username" name="username" required />
+          <br />
+          <label for="password">Senha:</label>
+          <input type="password" id="password" name="password" required />
+          <br />
+          <input type="submit" value="Login" />
+          <p style="font-size: 8pt;">Não tem uma conta?</p>
+          <a href="../pages/register.html" style="font-size: 8pt;">Cadastre-se</a>
+        </form>
+        <div id="acessos">  
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Criado por Allisson Sousa</p>
+      <a href="https://github.com/allissonsousa" target="_blank"
+        ><img class="footerimg" src="../resources/rounded.png" alt=""
+      /></a>
+      <a
+        href="https://www.linkedin.com/in/alllisson-sousa-541b39296"
+        target="blank"
+        ><img class="footerimg" src="../resources/linkedin.png" alt=""
+      /></a>
+    </footer>
+  </body>
+  <script src="../script/login.js"></script>
+</html>
+
+<!--<h2>Login com Google</h2>
+  <div id="g_id_onload"
+       data-client_id="SEU_CLIENT_ID_GOOGLE"
+       data-context="signin"
+       data-callback="handleCredentialResponse"
+       data-auto_prompt="false"></div>
+  <div class="g_id_signin"
+       data-type="standard"
+       data-size="large"
+       data-theme="outline"
+       data-text="signin_with"
+       data-shape="rectangular"
+       data-logo_alignment="left"></div>
+
+  <h2>Login com Facebook</h2>
+  <button onclick="loginComFacebook()">Entrar com Facebook</button>
+
+  <h2>Cronômetro</h2>
+  <div>
+    <button onclick="startTimer()">Iniciar</button>
+    <button onclick="stopTimer()">Parar</button>
+    <p>Tempo: <span id="timer">0.00</span>s</p>
+  </div>
+
+  <h2>Feedback da IA</h2>
+  <p id="log">Nenhum comentário ainda.</p>
+
+  <script src="script.js"></script>-->
