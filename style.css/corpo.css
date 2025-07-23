@@ -17,6 +17,7 @@ body {
   }
 }
 
+/*cubo que fica no fundo da tela e os ciruculos q giram*/
 
 #cubo {
   position: absolute;
@@ -93,6 +94,7 @@ body {
   }
 }
 
+/*barra de navegação*/
 nav {
   display: flex;
   justify-content: space-between;
@@ -230,6 +232,7 @@ aside#cronometro>div {
   display: flex;
   transform: translateX(-3vw);
 }
+/*formatação separado dos segundos e dos milisegundos*/
 #milisec {
   font-size: 60%;
   transform: translateY(3vw);

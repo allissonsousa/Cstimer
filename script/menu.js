@@ -1,5 +1,8 @@
-function surgeMedia() {
 
+//todas as funções abaixo sao responsaveis por controlar o surgimento de cada uma de suas divs especificamente
+// tanto artigo, quanto menu fecham ou abrem simultaneamente, sendo q o menu nunca deve ficar aberto junto como artigo
+
+function surgeMedia() {
   function media() {
     const artigo = document.getElementById("anotacaomedia");
     const tempo = document.getElementById("cronometro");
@@ -58,13 +61,17 @@ function surgeRecordes() {
 }
 
 
+//----
+
+// Função por fechar o artigo que esta aberto
 function fechaArtigo() {
   const artigomedia = document.getElementsByClassName("artigoaparece");
   for (let i = 0; i < artigomedia.length; i++) {
     artigomedia[i].classList.add("artigosome");
     artigomedia[i].classList.remove("artigoaparece");
   }
-
+    // exibição do tempo novamente na tela, com o delay de 0.3 segundos, para dar tempo do menu deslizar antes
+    //do tempo voltar
   function artigo() {
     const tempo = document.getElementById("cronometro");
     tempo.style.display = "flex";
@@ -73,7 +80,9 @@ function fechaArtigo() {
   setTimeout(artigo, 300);
 }
 
-function abreFecha() {
+
+// Função que muda a classe do submenu trazendo uma animação ou para aparecer ou para sumir
+function abreFecha() {  
   const submenu = document.getElementById("menuItens");
   if (submenu.classList.contains("menusome")) {
     submenu.classList.add("menuaparece");
