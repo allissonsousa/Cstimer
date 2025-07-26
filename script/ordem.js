@@ -6,7 +6,7 @@ function ordem() {
     let cont = 0
     listaFinal = []
     ultimaLetra = ''
-    while (cont < 12) {
+    while (cont < 16) {
         const lista1 = [" R ", " L ", " F ", " D ", " B ", " U "]    //lista de letras
         const lista2 = ["", "´ ", "2 "]                              //lista de possiveis pares para a letra
         let item1 = lista1[Math.floor(Math.random() * lista1.length)]

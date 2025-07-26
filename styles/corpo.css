@@ -11,7 +11,7 @@ body {
   filter: blur(0px);
   box-sizing: border-box;
 
-  &::-webkit-scrollbar{
+  &::-webkit-scrollbar {
     width: 0px;
     height: 0px;
   }
@@ -171,7 +171,8 @@ nav {
   min-width: 50px;
   max-width: 300px;
 }
-#logo>a{
+
+#logo>a {
   color: white;
 }
 
@@ -186,7 +187,7 @@ nav {
   width: 20px;
   margin: 15px;
 
-  &:hover{
+  &:hover {
     opacity: 0.5;
   }
 }
@@ -202,7 +203,7 @@ main {
 
 #random {
   display: block;
-  font-size: 3vw;
+  font-size: 2vw;
   max-height: fit-content;
 }
 
@@ -232,6 +233,7 @@ aside#cronometro>div {
   display: flex;
   transform: translateX(-3vw);
 }
+
 /*formatação separado dos segundos e dos milisegundos*/
 #milisec {
   font-size: 60%;
@@ -257,16 +259,17 @@ aside#anotaçao {
   justify-content: center;
   transition: all 1s;
   z-index: 1;
-  
+
 }
-.imgmain{
-height: 460px ;
-display: flex;
-flex-direction: column;
-justify-items: center;
-justify-content: space-between;
-align-items: center;
-z-index: 1;
+
+.imgmain {
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
 }
 
 .artigoaparece {
@@ -318,31 +321,32 @@ z-index: 1;
   z-index: 1;
 }
 
-#anotacaomedia>span>img {
+#anotacaomedia>span>img {}
 
-}
-
-#tempos{
+#tempos {
   padding: 10px;
   display: flex;
   justify-content: space-around;
-  align-content: space-around;  
+  align-content: space-around;
   flex-wrap: wrap;
-  overflow: scroll  ;
+  overflow: scroll;
 }
-#tempos::-webkit-scrollbar{
+
+#tempos::-webkit-scrollbar {
   color: transparent;
 }
-#tempos::-webkit-scrollbar-corner{
+
+#tempos::-webkit-scrollbar-corner {
   color: transparent;
 }
-.dados{
+
+.dados {
   align-self: center;
   display: block;
   border: 1px solid white;
   padding: 10px;
   border-radius: 5px;
-  margin: 1px; 
+  margin: 1px;
 }
 
 .metas {
@@ -350,8 +354,9 @@ z-index: 1;
   align-self: center;
   justify-content: space space-between;
   padding: 10px;
-  
+
 }
+
 .fecha {
   width: 15px;
   height: 15px;
